@@ -90,7 +90,8 @@ functions:
 #    Define function environment variables here
 #    environment:
 #      variable2: value2
-
+plugins:
+  - serverless-offline
 # you can add CloudFormation resource templates here
 #resources:
 #  Resources:
