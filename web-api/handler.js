@@ -1,3 +1,11 @@
+const connectToDatabase = require('./db');
+
+function HTTPError(statusCode, message) {
+  const error = new Error(message);
+  error.statusCode = statusCode;
+  return error;
+}
+
 module.exports.healthCheck = async () => {
   await connectToDatabase();
   console.log('Connection successful.');
